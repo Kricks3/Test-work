@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Сраница для тестового задания</title>
+	<meta charset="utf-8"/>
+	<meta name="discription" content="На данной страницы представлены товары нашего интернет магазина в городе Ростов-на-Дону">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<link rel="stylesheet" href="bootstrap.css">
+	<link rel="stylesheet" href="main.css">
+	<!-- <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script> -->
+</head>
+<body>	
+	<div id="template-product" style="display: none;">
+		<div class="catalogue-item col-lg-4">
+			<div class="name-wrapper col-lg-12 col-xs-5 col-md-12 ">
+				<h3 class="item-name"> {{ title }} </h3>
+			</div>
+			<span class="item-price col-lg-12 col-xs-2 col-sm-12">Год выпуска: {{ year }} </span>
+			<span class="item-price col-lg-12 col-xs-2 col-sm-12">Режиссер {{ creator }} </span>
+			<span class="item-price col-lg-12 col-xs-2 col-sm-12">Продолжительность: {{ duration }} </span>
+			<span class="item-price col-lg-12 col-xs-2 col-sm-12">Оценки: {{ rating }} из 10 </span>
+		</div>
+	</div>
+	<div class="header-main">
+		<div class="container">
+			<div class="header-main-logo col-lg-3 col-xs-12 col-md-4 col-sm-12">
+				<p class="logo-text">Cinema Search</p>
+			</div>
+			<div class="header-main-search col-lg-6 col-xs-12 col-md-6 col-sm-9">
+				<div id="input-search">
+					<input type="text" id="input-main-search" placeholder="Удалить фильм">
+					<button id="delete-film" class="btn-search"><i class="fa fa-ban"></i></button>
+				</div>
+			</div>	
+			<div class="header-main-buttons col-lg-3 col-xs-12 col-md-2 col-sm-3">
+				<button class="btn login-link">
+					<i class="fa fa-plus-square" aria-hidden="true"></i> Добавить фильм
+				</button>
+				
+			</div>
+		</div>
+	</div>
+	<div id="add-container" class="registration visually-hidden">
+		<form action="" class="registration-form">
+			<div class="field-wrapper"><input type="text" id="title" placeholder="Название фильма" required></div>		
+			<div class="field-wrapper"><input type="text" id="year" placeholder="Год выпуска" required></div>		
+			<div class="field-wrapper"><input type="text" id="creator" placeholder="Имя режиссера" required></div>		
+			<div class="field-wrapper"><input type="text" id="duration" placeholder="Продолжительность фильма" required></div>
+			<div class="field-wrapper"><input type="text" id="rating" placeholder="Рейтинг (до 10)" required></div>
+			<button id="add" class="registration-btn">Добавить</button>
+			<button class="close-btn form-close"></button>
+		</form>
+	</div>	
+	<div class="container">
+	
+		<div class="col-lg-3">
+			<aside class="left-side">
+				<ul>
+					<li><a href="#">Каталог</a></li>
+					<li><a href="#">Библиотека</a></li>
+					<li><a href="#">Жанры</a></li>
+				</ul>
+			</aside>
+		</div>
+		<div class="col-lg-9">
+			<h1>Каталог</h1>
+			<main id="main-products">
+				
+			</main>
+			<div style="clear: both;"></div>	
+			<div class="rait-menu">
+
+				<button type="submit"  id="show-more">
+					<span class="main-search-form_button-icon_double fa fa-align-right" aria-hidden="true"> показать еше</span>
+				</button>
+			
+				<button type="submit"  id='up'>
+					<span class="main-search-form_button-icon_double fa fa-arrow-up" aria-hidden="true"> Вверх</span>
+				</button>
+			
+				<button type="submit"  id="dawn">
+					<span class="main-search-form_button-icon_cart fa fa-arrow-down" aria-hidden="true"> Вниз</span>
+				</button>	
+			</div>	
+		</div>
+		
+	</div>
+	<script src="js/data.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
